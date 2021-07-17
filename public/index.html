@@ -48,7 +48,7 @@
                 body: JSON.stringify( data )
             })
             .then( resp => resp.json() )
-            .then( data = console.log( 'Nuestro Server', data ))
+            .then( data => console.log( 'Nuestro Server', data ))
             .catch( console.log )
         }
 
