@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Google SingIn</title>
 
     <meta name="google-signin-client_id" content="779092362150-p42goh0q8h3fg73ae0io2trn0mr9dm2n.apps.googleusercontent.com">
@@ -40,16 +39,16 @@
 
             
             var id_token = googleUser.getAuthResponse().id_token;
-            let data = { id_token };
+            const data = { id_token };
 
             fetch( url, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify( data )
             })
             .then( resp => resp.json() )
             .then( data => console.log( 'Nuestro Server', data ))
-            .catch( console.log )
+            .catch( console.log );
         }
 
         function signOut() {
